@@ -32,35 +32,53 @@ const SignIn = () => {
 
     return (
 
-        <form onSubmit={handleSubmit}>
+        <>
+            <form onSubmit={handleSubmit}>
 
-            <input
+                <input
 
-                type="email"
+                    type="email"
 
-                placeholder="Email"
+                    placeholder="Email"
 
-                value={form.email}
+                    value={form.email}
 
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
 
-            />
+                />
 
-            <input
+                <input
 
-                type="password"
+                    type="password"
 
-                placeholder="Password"
+                    placeholder="Password"
 
-                value={form.password}
+                    value={form.password}
 
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
+                    onChange={(e) => setForm({ ...form, password: e.target.value })}
 
-            />
+                />
 
-            <button type="submit">Sign In</button>
+                <button type="submit">Sign In</button>
 
-        </form>
+            </form>
+
+
+            <div className="menu">
+                <div className="logo">
+                    logo
+                </div>
+                <div className="links">
+                    <a href="/signup">Sign Up</a>
+                    <a href="/signin">Sign In</a>
+                    <a href="/home">Home</a>
+                </div>
+                <div className="menu-icon">
+
+                    <i className="fas fa-bars"></i>
+                </div>
+            </div>
+        </>
 
     );
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 
 import axios from "axios";
 
@@ -30,47 +30,52 @@ const SignUp = () => {
 
     return (
 
-        <form onSubmit={handleSubmit}>
+        <>
+            <div className="profile-image"></div>
 
-            <input
+            <form onSubmit={handleSubmit}>
 
-                type="text"
 
-                placeholder="Username"
+                <input
 
-                value={form.username}
+                    type="text"
 
-                onChange={(e) => setForm({ ...form, username: e.target.value })}
+                    placeholder="Username"
 
-            />
+                    value={form.username}
 
-            <input
+                    onChange={(e) => setForm({ ...form, username: e.target.value })}
 
-                type="email"
+                />
 
-                placeholder="Email"
+                <input
 
-                value={form.email}
+                    type="email"
 
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    placeholder="Email"
 
-            />
+                    value={form.email}
 
-            <input
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
 
-                type="password"
+                />
 
-                placeholder="Password"
+                <input
 
-                value={form.password}
+                    type="password"
 
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
+                    placeholder="Password"
 
-            />
+                    value={form.password}
 
-            <button type="submit">Sign Up</button>
+                    onChange={(e) => setForm({ ...form, password: e.target.value })}
 
-        </form>
+                />
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+        </>
 
     );
 

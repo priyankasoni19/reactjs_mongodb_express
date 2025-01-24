@@ -3,18 +3,75 @@ input::placeholder {
 }
 
 body {
-  background: lightcoral;
   min-height: 100vh;
 }
 
 form {
-  background: darkkhaki;
   width: max-content;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
   border-radius: 1rem;
-  box-shadow: 2px 2px 2px gray;
+  background: #fff;
+  border: 1px solid #ddd;
+  /* margin: 20px auto; */
 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease-in-out;
+
+
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input:hover,
+button:hover {
+  background: #fff;
+}
+
+.profile-image {
+  background: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #007bff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
